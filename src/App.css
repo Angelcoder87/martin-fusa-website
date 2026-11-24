@@ -1,0 +1,15 @@
+
+/* Component-specific styles will go here. */
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 88px;
+}
+
+main .container h1 {
+  font-size: clamp(40px, 7vw, 80px);
+  font-weight: 900;
+  margin-bottom: 15px;
+}

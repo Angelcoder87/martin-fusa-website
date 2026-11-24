@@ -1,0 +1,228 @@
+
+/* =================================
+   MARTIN FUSA - NAVIGATION
+================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(7, 13, 37, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar-container {
+  width: min(92%, 1300px);
+  height: 88px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* LOGO */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.logo-mark {
+  width: 43px;
+  height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2448D8, #142A86);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 23px;
+  font-weight: 900;
+  color: white;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+}
+
+.logo-text strong {
+  font-weight: 900;
+}
+
+.logo-text strong span {
+  color: #EF233C;
+}
+
+.logo-text small {
+  margin-top: 4px;
+  color: #A8B1CB;
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+/* DESKTOP NAVIGATION */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.desktop-nav a {
+  color: #A8B1CB;
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.desktop-nav a:hover {
+  color: white;
+}
+
+.desktop-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #EF233C;
+  transition: width 0.3s ease;
+}
+
+.desktop-nav a:hover::after {
+  width: 100%;
+}
+
+/* CALL TO ACTION */
+
+.navbar-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  background: #EF233C;
+  color: white;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.navbar-cta:hover {
+  background: #FF4055;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(239, 35, 60, 0.25);
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  width: 43px;
+  height: 43px;
+  border-radius: 12px;
+}
+
+/* MOBILE NAVIGATION */
+
+.mobile-nav {
+  display: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    gap: 20px;
+  }
+
+  .desktop-nav a {
+    font-size: 12px;
+  }
+
+  .navbar-cta {
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    height: 76px;
+  }
+
+  .desktop-nav,
+  .navbar-cta {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding: 0 5%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    background: rgba(7, 13, 37, 0.98);
+    transition: max-height 0.35s ease, opacity 0.3s ease,
+      padding 0.35s ease;
+  }
+
+  .mobile-nav-open {
+    max-height: 400px;
+    opacity: 1;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mobile-nav > a {
+    padding: 15px 5px;
+    color: #A8B1CB;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: color 0.3s ease;
+  }
+
+  .mobile-nav > a:hover {
+    color: white;
+  }
+
+  .mobile-nav .mobile-support {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 14px;
+    background: #EF233C;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+  }
+}

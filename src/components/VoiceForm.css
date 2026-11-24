@@ -1,0 +1,302 @@
+
+/* =================================
+   MARTIN FUSA - YOUR VOICE SECTION
+================================= */
+
+.voice-section {
+  position: relative;
+  padding: 120px 0;
+  overflow: hidden;
+  background: #070D25;
+  isolation: isolate;
+}
+
+.voice-container {
+  width: min(90%, 1120px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
+  gap: 85px;
+}
+
+/* BACKGROUND LIGHTING */
+
+.voice-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.voice-glow-red {
+  width: 380px;
+  height: 380px;
+  background: rgba(239, 35, 60, 0.17);
+  left: -150px;
+  top: 10%;
+}
+
+.voice-glow-blue {
+  width: 350px;
+  height: 350px;
+  background: rgba(36, 72, 216, 0.3);
+  right: -100px;
+  bottom: -50px;
+}
+
+/* LEFT CONTENT */
+
+.voice-content {
+  padding-top: 15px;
+}
+
+.voice-content h2 {
+  max-width: 450px;
+  color: white;
+  font-size: clamp(40px, 5vw, 58px);
+  font-weight: 850;
+  letter-spacing: -2.5px;
+  line-height: 1.12;
+}
+
+.voice-content h2 span {
+  color: #7895FF;
+}
+
+.voice-content > p {
+  max-width: 420px;
+  margin-top: 22px;
+  color: #A8B1CB;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* VOICE NOTE */
+
+.voice-note {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 42px;
+}
+
+.voice-note-icon {
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  color: white;
+  background: linear-gradient(135deg, #4169FF, #2448D8);
+}
+
+.voice-note h3 {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.voice-note span {
+  display: block;
+  margin-top: 5px;
+  color: #A8B1CB;
+  font-size: 11px;
+}
+
+/* FORM CONTAINER */
+
+.voice-form-wrapper {
+  width: 100%;
+  padding: 32px;
+  border-radius: 24px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.075),
+    rgba(36, 72, 216, 0.13)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.2);
+}
+
+/* FORM HEADER */
+
+.voice-form-header {
+  margin-bottom: 25px;
+}
+
+.voice-form-label {
+  color: #91A7FF;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.voice-form-header p {
+  margin-top: 9px;
+  color: #A8B1CB;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* FORM FIELDS */
+
+.voice-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.voice-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.voice-field label {
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.voice-field input,
+.voice-field select,
+.voice-field textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 11px;
+  outline: none;
+  border: 1px solid transparent;
+  background: #F0F2F9;
+  color: #19213D;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.voice-field input::placeholder,
+.voice-field textarea::placeholder {
+  color: #7E879D;
+}
+
+.voice-field input:focus,
+.voice-field select:focus,
+.voice-field textarea:focus {
+  border-color: #4169FF;
+  box-shadow: 0 0 0 3px rgba(65, 105, 255, 0.17);
+  background: white;
+}
+
+.voice-field select {
+  cursor: pointer;
+}
+
+.voice-field textarea {
+  min-height: 125px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+/* SUBMIT BUTTON */
+
+.voice-submit-btn {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  border: none;
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(135deg, #FF4055, #D91436);
+  font-size: 12px;
+  font-weight: 750;
+  box-shadow: 0 9px 25px rgba(239, 35, 60, 0.2);
+  transition: all 0.3s ease;
+}
+
+.voice-submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 13px 30px rgba(239, 35, 60, 0.32);
+}
+
+.voice-submit-btn:active {
+  transform: translateY(0);
+}
+
+.voice-status {
+  padding: 12px;
+  border-radius: 9px;
+  background: rgba(65, 105, 255, 0.12);
+  border: 1px solid rgba(65, 105, 255, 0.3);
+  color: #D0D9FF;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.voice-privacy-note {
+  color: #8290AA;
+  font-size: 10px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .voice-container {
+    gap: 45px;
+  }
+
+  .voice-form-wrapper {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .voice-section {
+    padding: 85px 0;
+  }
+
+  .voice-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .voice-content h2 {
+    font-size: 43px;
+  }
+
+  .voice-content > p {
+    font-size: 13px;
+  }
+
+  .voice-note {
+    margin-top: 28px;
+  }
+
+  .voice-form-wrapper {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 380px) {
+  .voice-form-wrapper {
+    padding: 17px;
+  }
+
+  .voice-content h2 {
+    font-size: 37px;
+  }
+}
+/* Honeypot spam protection */
+.voice-honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

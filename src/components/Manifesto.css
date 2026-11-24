@@ -1,0 +1,295 @@
+
+/* =================================
+   MARTIN FUSA - MANIFESTO SECTION
+================================= */
+
+.manifesto-section {
+  position: relative;
+  padding: 115px 0 125px;
+  overflow: hidden;
+  background: linear-gradient(
+    145deg,
+    #101B55 0%,
+    #10256E 50%,
+    #111D57 100%
+  );
+  isolation: isolate;
+}
+
+.manifesto-container {
+  width: min(90%, 1120px);
+  margin: 0 auto;
+}
+
+/* BACKGROUND LIGHTING */
+
+.manifesto-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.manifesto-glow-blue {
+  width: 400px;
+  height: 400px;
+  background: rgba(36, 72, 216, 0.4);
+  left: -150px;
+  bottom: -100px;
+}
+
+.manifesto-glow-red {
+  width: 350px;
+  height: 350px;
+  background: rgba(239, 35, 60, 0.2);
+  right: -100px;
+  top: 15%;
+}
+
+/* HEADER */
+
+.manifesto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.manifesto-heading-group .section-eyebrow {
+  margin-bottom: 15px;
+}
+
+.manifesto-heading-group h2 {
+  color: white;
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 850;
+  letter-spacing: -2px;
+}
+
+.manifesto-heading-group h2 span {
+  color: #A9BCFF;
+}
+
+.manifesto-heading-group > p {
+  max-width: 480px;
+  margin-top: 12px;
+  color: #B7C3E7;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* DOWNLOAD BUTTON */
+
+.manifesto-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 19px;
+  flex-shrink: 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 13px;
+  backdrop-filter: blur(15px);
+  font-size: 11px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.manifesto-download:hover {
+  background: rgba(36, 72, 216, 0.5);
+  border-color: #829BFF;
+  transform: translateY(-3px);
+}
+
+/* MANIFESTO GRID */
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/* INDIVIDUAL CARDS */
+
+.manifesto-card {
+  position: relative;
+  min-height: 190px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  border-radius: 20px;
+  background: rgba(36, 72, 216, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.manifesto-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* CARD TOP */
+
+.manifesto-card-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.manifesto-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    #5276FF,
+    #2448D8
+  );
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.manifesto-number {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* CARD CONTENT */
+
+.manifesto-card h3 {
+  max-width: 95%;
+  color: white;
+  font-size: 15px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+.manifesto-card > p {
+  margin-top: 9px;
+  color: #D0D9FF;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.manifesto-card-line {
+  width: 30px;
+  height: 2px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+  transition: width 0.3s ease;
+}
+
+.manifesto-card:hover .manifesto-card-line {
+  width: 65px;
+}
+
+/* FEATURED CARD */
+
+.manifesto-card-featured {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 35, 60, 0.28),
+    rgba(91, 46, 158, 0.55)
+  );
+}
+
+/* SUPPORT CARD */
+
+.manifesto-support-card {
+  background: linear-gradient(
+    135deg,
+    rgba(90, 39, 163, 0.9),
+    rgba(83, 34, 143, 0.85)
+  );
+  border-color: rgba(207, 168, 255, 0.3);
+}
+
+.manifesto-support-card:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.manifesto-support-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 17px;
+  padding: 12px 18px;
+  color: white;
+  background: linear-gradient(135deg, #FF4055, #D91436);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 750;
+  transition: all 0.3s ease;
+}
+
+.manifesto-support-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(239, 35, 60, 0.3);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .manifesto-section {
+    padding: 85px 0;
+  }
+
+  .manifesto-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .manifesto-grid {
+    gap: 13px;
+  }
+
+  .manifesto-card {
+    min-height: 205px;
+    padding: 20px;
+  }
+
+  .manifesto-card h3 {
+    font-size: 13px;
+  }
+
+  .manifesto-card > p {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 520px) {
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manifesto-card {
+    min-height: 175px;
+    padding: 23px;
+  }
+
+  .manifesto-heading-group h2 {
+    font-size: 37px;
+  }
+
+  .manifesto-download {
+    width: 100%;
+  }
+}

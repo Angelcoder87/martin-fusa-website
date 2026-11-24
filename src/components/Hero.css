@@ -1,0 +1,371 @@
+
+/* =================================
+   MARTIN FUSA - HERO SECTION
+================================= */
+
+.hero {
+  min-height: 760px;
+  min-height: min(850px, 100svh);
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 130px 0 100px;
+  overflow: hidden;
+  isolation: isolate;
+  background: #070D25;
+}
+
+.hero-container {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 70px;
+  position: relative;
+  z-index: 2;
+}
+
+/* BACKGROUND LIGHTING */
+
+.hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-glow-blue {
+  width: 420px;
+  height: 420px;
+  background: rgba(36, 72, 216, 0.32);
+  top: -100px;
+  right: 5%;
+}
+
+.hero-glow-red {
+  width: 350px;
+  height: 350px;
+  background: rgba(239, 35, 60, 0.16);
+  bottom: 0;
+  left: -150px;
+}
+
+/* INTRODUCTION */
+
+.hero-content {
+  max-width: 570px;
+}
+
+.hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 15px;
+  margin-bottom: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 50px;
+  color: #D7DEFA;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #EF233C;
+  box-shadow: 0 0 12px rgba(239, 35, 60, 0.8);
+}
+
+.hero-content h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(65px, 8vw, 105px);
+  font-weight: 900;
+  line-height: 0.91;
+  letter-spacing: -6px;
+  color: #FFFFFF;
+}
+
+.hero-content h1 > span {
+  display: block;
+}
+
+.hero-period {
+  color: #EF233C;
+}
+
+.hero-content h2 {
+  margin-top: 26px;
+  color: #FF4055;
+  font-size: clamp(19px, 2.2vw, 25px);
+  font-weight: 750;
+  letter-spacing: -0.5px;
+}
+
+.hero-description {
+  max-width: 460px;
+  margin-top: 18px;
+  color: #A8B1CB;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* HERO BUTTONS */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 30px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 49px;
+  padding: 0 23px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+  color: white;
+  background: linear-gradient(135deg, #FF4055, #D91436);
+  box-shadow: 0 8px 25px rgba(239, 35, 60, 0.2);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(239, 35, 60, 0.35);
+}
+
+.hero-btn-secondary {
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.hero-btn-secondary:hover {
+  background: rgba(36, 72, 216, 0.3);
+  border-color: #4169FF;
+}
+
+/* SMALL CAMPAIGN NOTE */
+
+.hero-bottom-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 55px;
+  color: #8290BA;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-note-line {
+  width: 32px;
+  height: 1px;
+  background: #EF233C;
+}
+
+/* CANDIDATE IMAGE */
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-glow {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  background: rgba(36, 72, 216, 0.5);
+  filter: blur(75px);
+  border-radius: 50%;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: min(100%, 440px);
+  height: 540px;
+  padding: 9px;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #4169FF,
+    rgba(36, 72, 216, 0.5),
+    rgba(255, 255, 255, 0.12)
+  );
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(36, 72, 216, 0.2);
+  z-index: 2;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 24px;
+}
+
+.hero-image-top-label,
+.hero-image-bottom-label {
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 30px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.hero-image-top-label {
+  top: 25px;
+  right: 23px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #142A86;
+}
+
+.hero-image-bottom-label {
+  bottom: 25px;
+  left: 23px;
+  background: rgba(7, 13, 37, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+.hero-image-decoration {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(65, 105, 255, 0.5);
+  border-radius: 25px;
+  right: -25px;
+  bottom: -25px;
+  z-index: 1;
+}
+
+/* SCROLL INDICATOR */
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #7180AA;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.hero-scroll-indicator span {
+  width: 25px;
+  height: 1px;
+  background: #EF233C;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .hero-container {
+    gap: 35px;
+    grid-template-columns: 1fr 0.85fr;
+  }
+
+  .hero-image-frame {
+    height: 450px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(60px, 8vw, 80px);
+    letter-spacing: -4px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: auto;
+    padding: 125px 0 90px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(65px, 15vw, 90px);
+    letter-spacing: -4px;
+  }
+
+  .hero-content h2 {
+    font-size: 20px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-btn {
+    padding: 0 16px;
+    font-size: 11px;
+  }
+
+  .hero-bottom-note {
+    margin-top: 35px;
+    font-size: 8px;
+  }
+
+  .hero-image-frame {
+    width: min(85%, 360px);
+    height: 430px;
+  }
+
+  .hero-image-decoration {
+    right: 2%;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}
