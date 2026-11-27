@@ -216,36 +216,23 @@
   background: #EF4058;
 }
 
-/* CANDIDATE PORTRAIT — OPEN CUTOUT STYLE */
+/* CANDIDATE PORTRAIT — LARGE CUTOUT */
 
 .hero-visual {
   position: relative;
   min-width: 0;
-  min-height: 570px;
+  min-height: 760px;
   display: flex;
   justify-content: center;
   align-items: center;
   isolation: isolate;
-  transform: translateY(-30px);
+  transform: translateY(-100px);
 }
 
-.hero-image-glow {
-  position: absolute;
-  width: 75%;
-  height: 75%;
-  top: 13%;
-  left: 12%;
-  border-radius: 50%;
-  background: rgba(49,92,255,.3);
-  filter: blur(85px);
-  z-index: -2;
-}
-
-/* This is now an open portrait stage, not a photo frame */
 .hero-image-frame {
   position: relative;
-  width: min(115%, 570px);
-  height: 650px;
+  width: min(145%, 820px);
+  height: 850px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -270,7 +257,6 @@
 
 .hero-image-frame:hover .hero-image {
   transform: translateY(-7px);
-  filter: drop-shadow(0 30px 50px rgba(0,0,0,.45));
 }
 
 /* FLOATING GLASS LABELS */
