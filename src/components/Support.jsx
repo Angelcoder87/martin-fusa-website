@@ -2,7 +2,6 @@
 import { motion } from 'framer-motion';
 import {
   Heart,
-  ArrowRight,
   Handshake,
   Share2
 } from 'lucide-react';
@@ -36,12 +35,10 @@ function Support() {
 
               <h2>Stand with Martin</h2>
 
-              <p>
                 <p>
   Support the vision for a better Umoja II.
   Contribute through M-Pesa, volunteer your time,
   or help spread the word across your estate.
-</p>
               </p>
 
               <div className="support-options">
@@ -76,11 +73,6 @@ function Support() {
   </p>
 
 </div>
-
-            <a href="#contact" className="support-button">
-              Support Martin
-              <ArrowRight size={17} />
-            </a>
 
           </motion.div>
 

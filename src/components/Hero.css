@@ -7,7 +7,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 145px 0 100px;
+  padding: 90px 0 80px;
   overflow: hidden;
   isolation: isolate;
   background:
@@ -445,11 +445,11 @@
     letter-spacing: 1.5px;
   }
 
-   .hero-visual {
-    min-height: 480px;
-    margin-top: 5px;
-    top: -35px;
-  }
+ .hero-visual {
+  min-height: 480px;
+  margin-top: 35px;
+  top: 0;
+}
 
   .hero-image-frame {
     width: min(100%, 430px);
