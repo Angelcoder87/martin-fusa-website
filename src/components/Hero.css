@@ -215,24 +215,22 @@
   flex-shrink: 0;
   background: #EF4058;
 }
-
-/* CANDIDATE PORTRAIT — LARGE CUTOUT */
+/* CANDIDATE PORTRAIT — ENLARGED CUTOUT */
 
 .hero-visual {
   position: relative;
   min-width: 0;
-  min-height: 760px;
+  min-height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
   isolation: isolate;
-  transform: translateY(-100px);
 }
 
 .hero-image-frame {
   position: relative;
   width: min(145%, 820px);
-  height: 850px;
+  height: 780px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -251,12 +249,14 @@
   object-fit: contain;
   object-position: center bottom;
   border-radius: 0;
+  transform: scale(1.4) translateY(-35px);
+  transform-origin: center bottom;
   filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.25));
-  transition: transform 0.6s ease;
+  transition: transform 0.5s ease;
 }
 
 .hero-image-frame:hover .hero-image {
-  transform: translateY(-7px);
+  transform: scale(1.4) translateY(-45px);
 }
 
 /* FLOATING GLASS LABELS */
@@ -391,10 +391,11 @@
   .hero {
     min-height: auto;
     padding: 125px 0 85px;
+  }
+
   .hero-image-frame {
-  width: min(100%, 430px);
-  height: 480px;
-}
+    width: min(100%, 430px);
+    height: 480px;
   }
 
   .hero-container {
@@ -444,14 +445,15 @@
     letter-spacing: 1.5px;
   }
 
-  .hero-visual {
-    min-height: 440px;
+   .hero-visual {
+    min-height: 480px;
     margin-top: 5px;
+    top: -35px;
   }
 
   .hero-image-frame {
-    width: min(100%, 410px);
-    height: 460px;
+    width: min(100%, 430px);
+    height: 480px;
   }
 
   .hero-image-top-label {
@@ -634,15 +636,3 @@
   }
 }
 
-/* HERO PORTRAIT POSITION */
-
-.hero-visual {
-  position: relative;
-  top: -170px;
-}
-
-@media (max-width: 700px) {
-  .hero-visual {
-    top: -70px;
-  }
-}
